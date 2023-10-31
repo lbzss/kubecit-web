@@ -1,9 +1,9 @@
 FROM node:latest as build-stage
 WORKDIR /app
-# ENV NODE_ENV production
-# COPY package*.json ./
-# RUN npm install
-# RUN npm run build:pro
+ENV NODE_ENV production
+COPY package*.json ./
+RUN npm install
+RUN npm run build:pro
 COPY . .
 
 
